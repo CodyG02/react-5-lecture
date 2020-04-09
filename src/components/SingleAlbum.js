@@ -11,7 +11,10 @@ class SingleAlbum extends Component {
   }
 
   componentDidMount() {
-    //Derive album here
+   const album = albums.find((element) => element.id === +this.props.match.params.id)
+   this.setState({
+     album: album
+   })
   }
 
   render() {
